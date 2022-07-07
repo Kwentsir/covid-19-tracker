@@ -29,6 +29,8 @@
                 ]
             }
         ],
+        "no-param-reassign": 0,
+        "react/prop-types": "off",
         "react/react-in-jsx-scope": "off",
         "import/no-unresolved": "off",
         "no-shadow": "off"

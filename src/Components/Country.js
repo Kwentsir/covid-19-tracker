@@ -1,4 +1,5 @@
-import PropTypes from "prop-types";
+/* eslint-disable implicit-arrow-linebreak, function-paren-newline */
+import PropTypes from 'prop-types';
 
 const Country = ({
   country: {
@@ -8,9 +9,9 @@ const Country = ({
   },
   index,
 }) => {
-  const bgColor = (fade = "ff") =>
+  const bgColor = (fade = 'ff') =>
     `#${
-      (index + 1) % 4 === 2 || (index + 1) % 4 === 3 ? "D04278" : "DD4681"
+      (index + 1) % 4 === 2 || (index + 1) % 4 === 3 ? 'D04278' : 'DD4681'
     }${fade}`;
   return (
     <div
@@ -18,9 +19,9 @@ const Country = ({
       className="countryDetails"
       style={{
         backgroundImage: `linear-gradient(to right, #ffffff00, ${bgColor(
-          "aa"
-        )} 40%, ${bgColor("cc")} 65%, ${bgColor()} 80%), url(${flag})`,
-        backgroundSize: "50% 100%",
+          'aa',
+        )} 40%, ${bgColor('cc')} 65%, ${bgColor()} 80%), url(${flag})`,
+        backgroundSize: '50% 100%',
       }}
     >
       <div className="countryCount">
@@ -33,7 +34,7 @@ const Country = ({
   );
 };
 
-Country.PropTypes = {
+Country.propTypes = {
   country: PropTypes.shape({
     country: PropTypes.string.isRequired,
     cases: PropTypes.number.isRequired,

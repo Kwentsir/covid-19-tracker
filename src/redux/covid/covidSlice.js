@@ -1,19 +1,18 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import covidAPI from './api'
-
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import covidAPI from './api';
 
 export const fetchCountries = createAsyncThunk(
-  "covid/fetchCountries",
-  covidAPI.fetchAllCountries
+  'covid/fetchCountries',
+  covidAPI.fetchAllCountries,
 );
 
 export const fetchTotalData = createAsyncThunk(
-  "covid/fetchTotalData",
-  covidAPI.fetchAllContinents
+  'covid/fetchTotalData',
+  covidAPI.fetchAllContinents,
 );
 
 const covidSlice = createSlice({
-  name: "covid",
+  name: 'covid',
   initialState: {
     continents: [],
     countries: [],
@@ -37,11 +36,11 @@ const covidSlice = createSlice({
         state.continents = action.payload;
         state.totalData.totalCases = action.payload.reduce(
           (acc, cur) => acc + cur.cases,
-          0
+          0,
         );
         state.totalData.totalDeaths = action.payload.reduce(
           (acc, cur) => acc + cur.deaths,
-          0
+          0,
         );
         state.error = null;
       })

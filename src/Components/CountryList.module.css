@@ -1,0 +1,11 @@
+.country-card {
+    background-color: #DD4681;
+    text-align: left;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.country-card:nth-child(4n + 2),
+.country-card:nth-child(4n + 3) {
+    background-color: #D04278;
+}

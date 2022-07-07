@@ -1,5 +1,5 @@
-const apiContinentsURL = "https://corona.lmao.ninja/v2/continents";
-const apiCountriesURL = "https://corona.lmao.ninja/v2/countries";
+const apiContinentsURL = 'https://corona.lmao.ninja/v2/continents';
+const apiCountriesURL = 'https://corona.lmao.ninja/v2/countries';
 
 const fetchAllContinents = async () => {
   const response = await fetch(apiContinentsURL).then((data) => data.json());
