@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter&family=Lato&family=Poppins&display=swap');
+
 body {
   margin: 0;
-  background-color: #E84C8F;
+  background-color: #e84c8f;
 }
 
 .navContainer {
   display: flex;
   justify-content: space-evenly;
   height: 50px;
-  background-color: #B03D6A;
+  background-color: #b03d6a;
   border-radius: 15px;
   margin: 0 30px 20px 30px;
   font-family: 'Lato', sans-serif;
@@ -16,22 +17,20 @@ body {
 }
 
 .backButton {
-  color: #FAF6FB;
+  color: #faf6fb;
 }
 
 .title {
   justify-self: center;
-  color: #FAF6FB;
+  color: #faf6fb;
   padding-bottom: 55px;
 }
 
 .globeDetails {
   display: flex;
   justify-content: center;
-  background-color: #D9467C;
+  background-color: #d9467c;
   padding-top: 20px;
-  margin-top: 20px;
-  margin-bottom: 0;
   border-radius: 15px;
   margin: 0 30px;
 }
@@ -45,7 +44,7 @@ body {
   flex-direction: column;
   padding-top: 30px;
   font-family: 'Lato', sans-serif;
-  color: #FAF6FB;
+  color: #faf6fb;
 }
 
 .continentContainer {
@@ -65,7 +64,7 @@ body {
   display: flex;
   align-self: flex-start;
   font-family: 'Lato', sans-serif;
-  color: #FAF6FB;
+  color: #faf6fb;
 }
 
 .continentText {
@@ -73,14 +72,13 @@ body {
   flex-direction: column;
   align-self: flex-end;
   font-family: 'Lato', sans-serif;
-  color: #FAF6FB;
+  color: #faf6fb;
 }
 
 .continentDetails {
   display: flex;
   justify-content: center;
   gap: 20px;
-
 }
 
 .continentCount {
@@ -89,7 +87,7 @@ body {
   gap: 20px;
   padding-top: 40px;
   font-family: 'Lato', sans-serif;
-  color: #FAF6FB;
+  color: #faf6fb;
 }
 
 .countryContainer {
@@ -99,7 +97,7 @@ body {
   background-repeat: no-repeat;
   margin: 0 30px;
   font-family: 'Lato', sans-serif;
-  color: #FAF6FB;
+  color: #faf6fb;
 }
 
 .countryDetails {
