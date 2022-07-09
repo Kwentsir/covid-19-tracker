@@ -15,12 +15,12 @@ Additional description about the project and its features.
 - API
 
 ## Live Demo
-
+Click here to visit a [Live Demo Page](https://covid-19-tracker-kwentsir.netlify.app/) 
 
 
 ## Project Description
 
-Click here to watch a [video](VIDEO) that gives a brief description of the project
+Click here to watch a [video](https://www.loom.com/share/288349ad66c5440f88e8c9fa63c45284) that gives a brief description of the project
 
 ## Getting Started with Create React App
 
