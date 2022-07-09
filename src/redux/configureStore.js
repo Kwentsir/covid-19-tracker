@@ -1,10 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, applyMiddleware, createStore } from 'redux';
+import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-import covidReducer from './covid/covidSlice';
+import { covidReducer } from './covid/covidSlice';
 
-const store = configureStore({
-  reducer: { covid: covidReducer },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+const reducers = combineReducers({
+  details: covidReducer,
 });
+
+const middlewares = [thunk, logger];
+
+const store = createStore(reducers, applyMiddleware(...middlewares));
 
 export default store;

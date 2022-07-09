@@ -2,7 +2,7 @@
 
 # COVID-19 TRACKER APP
 
-> This is a web app that display metric data from an API for covid-19 cases globally
+> This is a web app that display metric data from an API for covid-19 cases in different countries.
 
 
 Additional description about the project and its features.

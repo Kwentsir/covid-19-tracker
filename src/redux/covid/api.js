@@ -1,18 +1,31 @@
 import axios from 'axios';
 
-const apiContinentsURL = 'https://corona.lmao.ninja/v2/continents';
-const apiCountriesURL = 'https://corona.lmao.ninja/v2/countries';
-
-const fetchAllContinents = async () => {
-  const response = await axios
-    .get(apiContinentsURL)
-    .then((data) => data.json());
-  return response;
-};
+const apiCountriesURL = 'https://disease.sh/v3/covid-19/countries';
 
 const fetchAllCountries = async () => {
-  const response = await axios.get(apiCountriesURL).then((data) => data.json());
-  return response;
+  const stats = [];
+  const response = await axios.get(apiCountriesURL);
+  const responseStat = response.data;
+
+  responseStat.map(({ countryInfo: { _id: id, flag }, ...data }) => {
+    const staticsCovid = {
+      continent: data.continent,
+      country: data.country,
+      country_id: id,
+      country_flag: flag,
+      total_cases: data.cases,
+      total_deaths: data.deaths,
+      total_recovered: data.recovered,
+      total_active: data.active,
+      total_tests: data.tests,
+      population: data.population,
+      todays_cases: data.todayCases,
+      todays_deaths: data.todayDeaths,
+      todays_recovered: data.todayRecovered,
+    };
+    return stats.push(staticsCovid);
+  });
+  return stats;
 };
 
-export default { fetchAllCountries, fetchAllContinents };
+export default fetchAllCountries;
